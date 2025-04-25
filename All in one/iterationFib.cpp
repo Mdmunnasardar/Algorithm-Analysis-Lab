@@ -14,7 +14,9 @@ int main() {
     int n;
     cout << "Enter a number: ";
     cin >> n;
-
-    cout << "Fibonacci number at position " << n << " is: " << fib2(n) << endl;
+    cout << "Fibonacci sequence up to position " << n << ": ";
+    for (int i = 0; i <= n; ++i) {
+        cout << fib2(i) << " ";
+    }
     return 0;
 }
