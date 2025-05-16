@@ -16,7 +16,7 @@ void insertionSort(int arr[], int n) {
         arr[j + 1] = key;  // Insert key at correct position
     }
 }
-
+                                                  
 // Function to print the array
 void printArray(int arr[], int n) {
     for (int i = 0; i < n; ++i)
