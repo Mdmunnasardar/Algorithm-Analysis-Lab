@@ -54,7 +54,7 @@ int main()
 
     Forwargraph(c, k, n, path, cost);
 
-    cout << "Minimum Cost : " << endl;
+    cout << "Minimum Cost : " <<cost[n-1]<< endl;
 
     cout << "Optimal path: " << endl;
 
