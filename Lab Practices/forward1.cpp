@@ -29,6 +29,7 @@ for (int i = k - 2; i >= 0; i--)
 {
     path[i] = pred[path[i + 1]];
 }
+path[0] = 0; 
 }
 
 int main()
