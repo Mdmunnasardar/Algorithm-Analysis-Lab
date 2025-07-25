@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <climits>
-using namespace std;
+     using namespace std;
 
 const int INF = INT_MAX;
 
@@ -18,7 +18,7 @@ void ForwardGraph(vector<vector<int>> &c, int k, int n, vector<int> &path, vecto
         {
             if (c[i][j] != INF && cost[i] != INF && cost[j] > cost[i] + c[i][j])
             {
-                cost[j] = cost[i] + c[i][j];  // Corrected cost[i][j] to c[i][j]
+                cost[j] = cost[i] + c[i][j];
                 pred[j] = i;
             }
         }
