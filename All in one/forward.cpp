@@ -31,7 +31,7 @@ int main() {
     cout << "Enter number of vertices (n) and stages (k): ";
     cin >> n >> k;
 
-    vector<vector<int>> c(n, vector<int>(n, INF));
+   vector<vector<int>> c(n, vector<int>(n, INF));
     cout << "Enter number of edges: ";
     cin >> e;
 
