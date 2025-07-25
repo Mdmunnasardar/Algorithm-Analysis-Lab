@@ -10,20 +10,21 @@ void FGraph(vector<vector<int>>& c, int k, int n, vector<int>& path, vector<int>
     cost[n - 1] = 0;          // Cost to reach destination is 0
 
     // Backward computation of costs
-    for (int j = n - 2; j >= 0; --j) {
-        for (int r = 0; r < n; ++r) {
-            if (c[j][r] != INF && cost[r] != INF && cost[j] > c[j][r] + cost[r]) {
-                cost[j] = c[j][r] + cost[r];
-                d[j] = r;
-            }
+   for (int j = n - 2; j >= 0; --j) {
+    for (int i = 0; i < n; ++i) {
+        if (c[j][i] != INF && cost[i] != INF && cost[j] > c[j][i] + cost[i]) {
+            cost[j] = c[j][i] + cost[i];
+            d[j] = i;
         }
     }
+}
+
 
     // Reconstruct the path
     path[0] = 0;
     path[k - 1] = n - 1;
-    for (int j = 1; j < k - 1; ++j) {
-        path[j] = d[path[j - 1]];
+    for (int i = 1; i < k - 1; ++i) {
+        path[i] = d[path[i - 1]];
     }
 }
 
