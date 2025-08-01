@@ -18,10 +18,10 @@ private:
         if (node == nullptr) {
             return new Node(value);
         }
-        if (value < node->data) {           // go left for smaller
+        if (value < node->data) {          
             node->left = Insertion(node->left, value);
         }
-        else if (value > node->data) {      // go right for bigger
+        else if (value > node->data) {      
             node->right = Insertion(node->right, value);
         }
         return node;
@@ -90,6 +90,5 @@ int main() {
 
     cout << "Postorder traversal: ";
     bst.postorder();
-
     return 0;
 }
