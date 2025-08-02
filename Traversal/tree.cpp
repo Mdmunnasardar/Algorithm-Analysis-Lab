@@ -48,7 +48,6 @@ int main() {
     int length = sizeof(preorder) / sizeof(preorder[0]);
 
     TreeNode* root = buildFromPreIn(preorder, inorder, length);
-
     printLevelOrder(root);
     return 0;
 }
